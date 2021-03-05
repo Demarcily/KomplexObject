@@ -21,8 +21,13 @@ public class Komplex {
   }
 
   public Komplex multiply(Komplex b) {
-    double v = this.real * b.real;
-    double vc = this.imagine * b.imagine;
+    double v = (this.real * b.real) - (this.imagine * b.imagine);
+    double vc = (this.real * b.imagine) + (this.imagine * b.real);
     return new Komplex(v, vc);
+  }
+
+  public double arg() {
+
+    return 0;
   }
 }
